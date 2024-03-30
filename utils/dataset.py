@@ -10,6 +10,7 @@ class ISBI_Loader(Dataset):
         # 初始化函数，读取所有data_path下的图片
         self.data_path = data_path
         self.imgs_path = glob.glob(os.path.join(data_path, 'Training_Images/*.jpg'))
+        print(f'{self.imgs_path}')
 
     def augment(self, image, flipCode):
         # 使用cv2.flip进行数据增强，filpCode为1水平翻转，0垂直翻转，-1水平+垂直翻转
