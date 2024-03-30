@@ -53,6 +53,6 @@ if __name__ == "__main__":
     # 将网络拷贝到deivce中
     net.to(device=device)
     # 指定训练集地址，开始训练
-    data_path = r"D:\Pycharm_Projects\UNet\unet_42_HV\train" # todo 修改为你本地的数据集位置
+    data_path = r"train" # todo 修改为你本地的数据集位置
     print('开始训练模型：')
     train_net(net, device, data_path, epochs=5, batch_size=1)
