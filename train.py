@@ -13,7 +13,9 @@ def train_net(net, device, data_path, epochs=40, batch_size=1, lr=0.00001):
     absolute_data_path = os.path.abspath(data_path)
 
     isbi_dataset = ISBI_Loader(absolute_data_path)
+
     print(len(isbi_dataset))
+
     per_epoch_num = len(isbi_dataset) / batch_size
 
     train_loader = torch.utils.data.DataLoader(dataset=isbi_dataset,
