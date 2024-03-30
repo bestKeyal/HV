@@ -11,6 +11,7 @@ import os
 def train_net(net, device, data_path, epochs=40, batch_size=1, lr=0.00001):
     # 加载训练集
     absolute_data_path = os.path.abspath(data_path)
+    print(absolute_data_path)
 
     isbi_dataset = ISBI_Loader(absolute_data_path)
 
@@ -61,6 +62,6 @@ if __name__ == "__main__":
     # 将网络拷贝到deivce中
     net.to(device=device)
     # 指定训练集地址，开始训练
-    data_path = r"train"  # todo 修改为你本地的数据集位置
+    data_path = r"/kaggle/working/HV/train"  # todo 修改为你本地的数据集位置
     print('开始训练模型：')
     train_net(net, device, data_path, epochs=5, batch_size=1)
