@@ -9,6 +9,7 @@ class ISBI_Loader(Dataset):
     def __init__(self, data_path):
         # 初始化函数，读取所有data_path下的图片
         self.data_path = data_path
+        print(data_path)
         self.imgs_path = glob.glob(os.path.join(data_path, 'Training_Images/*.jpg'))
         print(f'{self.imgs_path}')
 
