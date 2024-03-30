@@ -52,7 +52,7 @@ class ISBI_Loader(Dataset):
 
     
 if __name__ == "__main__":
-    isbi_dataset = ISBI_Loader("data/train/")
+    isbi_dataset = ISBI_Loader(r"D:\Pycharm_Projects\UNet\unet_42_HV\train")
     print("数据个数：", len(isbi_dataset))
     train_loader = torch.utils.data.DataLoader(dataset=isbi_dataset,
                                                batch_size=2, 
